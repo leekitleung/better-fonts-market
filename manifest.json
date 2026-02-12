@@ -1,33 +1,33 @@
-﻿{
-    "manifestVersion":  "1",
-    "generatedAt":  "2026-02-12T00:51:04Z",
-    "source":  {
-                   "id":  "better-fonts-market",
-                   "name":  "Better Fonts Market",
-                   "homepage":  "https://github.com/leekitleung/better-fonts-market"
-               },
-    "fonts":  [
-                  {
-                      "id":  "gbk1-001-f633cb54",
-                      "family":  "汇文明朝体",
-                      "style":  "normal",
-                      "weight":  400,
-                      "url":  "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.otf",
-                      "sha256":  "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
-                      "size":  24426256,
-                      "updatedAt":  "2021-01-16T12:41:33Z",
-                      "license":  "unknown"
-                  },
-                  {
-                      "id":  "gbk1-001-ca6f0cc6",
-                      "family":  "汇文明朝体",
-                      "style":  "normal",
-                      "weight":  400,
-                      "url":  "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.ttf",
-                      "sha256":  "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
-                      "size":  24426256,
-                      "updatedAt":  "2021-10-26T06:10:58Z",
-                      "license":  "unknown"
-                  }
-              ]
+{
+  "manifestVersion": "1",
+  "generatedAt": "2026-02-12T00:52:38Z",
+  "source": {
+    "id": "better-fonts-market",
+    "name": "Better Fonts Market",
+    "homepage": "https://github.com/leekitleung/better-fonts-market"
+  },
+  "fonts": [
+    {
+      "id": "gbk1-001-f633cb54",
+      "family": "汇文明朝体",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.otf",
+      "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
+      "size": 24426256,
+      "updatedAt": "2026-02-12T00:52:27Z",
+      "license": "unknown"
+    },
+    {
+      "id": "gbk1-001-ca6f0cc6",
+      "family": "汇文明朝体",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.ttf",
+      "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
+      "size": 24426256,
+      "updatedAt": "2026-02-12T00:52:27Z",
+      "license": "unknown"
+    }
+  ]
 }
