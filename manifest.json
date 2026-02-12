@@ -1,12 +1,56 @@
 {
   "manifestVersion": "1",
-  "generatedAt": "2026-02-12T00:52:38Z",
+  "generatedAt": "2026-02-12T11:40:06Z",
   "source": {
     "id": "better-fonts-market",
     "name": "Better Fonts Market",
     "homepage": "https://github.com/leekitleung/better-fonts-market"
   },
   "fonts": [
+    {
+      "id": "geelydesigntype-b-230a8ca2",
+      "family": "GeelyDesignType B",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-B.TTF",
+      "sha256": "21046a08e5f5552ff1e10f88681881629d157ff8f09f38afc8f4c468673f53f1",
+      "size": 1593584,
+      "updatedAt": "2026-02-12T11:39:57Z",
+      "license": "unknown"
+    },
+    {
+      "id": "geelydesigntype-l-5ffe18f3",
+      "family": "GeelyDesignType L",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-L.TTF",
+      "sha256": "da762aca27938b8cdbe8e4dc46f6ed0bcdd64db99dbadfdd0c69a8739f47099b",
+      "size": 1621824,
+      "updatedAt": "2026-02-12T11:39:57Z",
+      "license": "unknown"
+    },
+    {
+      "id": "geelydesigntype-r-b7a8af88",
+      "family": "GeelyDesignType R",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-R.TTF",
+      "sha256": "1e78865b7694bd0882c4f93f9c9c9cb8eaae9dcc4588afb47ed92b7ec307084d",
+      "size": 1604836,
+      "updatedAt": "2026-02-12T11:39:57Z",
+      "license": "unknown"
+    },
+    {
+      "id": "fancy-freefont1-f7f4250d",
+      "family": "Fancy FreeFont1",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%AD%97%E8%A8%80%E5%AD%97%E5%9E%8B-%E6%89%8B%E7%B9%AA%E9%AB%94/Fancy-FreeFont1.ttf",
+      "sha256": "09c89347322f2a9a590130a776c579f2b651626f7905410c13f631c896036158",
+      "size": 5173708,
+      "updatedAt": "2026-02-12T11:39:57Z",
+      "license": "unknown"
+    },
     {
       "id": "gbk1-001-f633cb54",
       "family": "汇文明朝体",
@@ -15,7 +59,7 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.otf",
       "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
       "size": 24426256,
-      "updatedAt": "2026-02-12T00:52:27Z",
+      "updatedAt": "2026-02-12T11:39:57Z",
       "license": "unknown"
     },
     {
@@ -26,7 +70,29 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93GBK1.001/%E6%B1%87%E6%96%87%E6%98%8E%E6%9C%9D%E4%BD%93.ttf",
       "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
       "size": 24426256,
-      "updatedAt": "2026-02-12T00:52:27Z",
+      "updatedAt": "2026-02-12T11:39:57Z",
+      "license": "unknown"
+    },
+    {
+      "id": "xuanzongti-v0-1-ce1d6a35",
+      "family": "XuanZongTi v0.1",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E7%8E%84%E5%AE%97%E4%BD%93/XuanZongTi-v0.1.otf",
+      "sha256": "f278b2b6e1d1808b757340fe7fd96afc3c65c9c6670677242fd6745e032d7539",
+      "size": 38607976,
+      "updatedAt": "2026-02-12T11:39:58Z",
+      "license": "unknown"
+    },
+    {
+      "id": "xcduanzhuangsongti-a9205862",
+      "family": "XCDUANZHUANGSONGTI",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E9%A6%99%E8%90%83%E7%AB%AF%E5%BA%84%E5%AE%8B%E4%BD%93/XCDUANZHUANGSONGTI.ttf",
+      "sha256": "e8f77d1ab3b8558b3e130e9cf07af52b960b58e277abfb14522ddef2606a739a",
+      "size": 2959724,
+      "updatedAt": "2026-02-12T11:39:58Z",
       "license": "unknown"
     }
   ]
