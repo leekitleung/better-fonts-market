@@ -1,0 +1,48 @@
+﻿name: auto-update-manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fonts/**'
+      - '*.ttf'
+      - '*.otf'
+      - '*.ttc'
+      - '*.woff'
+      - '*.woff2'
+      - 'scripts/generate-manifest.ps1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate manifest
+        shell: pwsh
+        run: |
+          $repo = "${{ github.repository }}".Split('/')[1]
+          ./scripts/generate-manifest.ps1 `
+            -RepoOwner "${{ github.repository_owner }}" `
+            -RepoName $repo `
+            -Branch "${{ github.ref_name }}" `
+            -FontDir "." `
+            -Output "manifest.json"
+
+      - name: Commit manifest if changed
+        shell: pwsh
+        run: |
+          if (git diff --quiet -- manifest.json) {
+            Write-Host "No manifest changes."
+            exit 0
+          }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json
+          git commit -m "chore: auto-update manifest"
+          git push
