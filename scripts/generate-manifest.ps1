@@ -1,4 +1,4 @@
-﻿param(
+param(
   [string]$RepoOwner = 'leekitleung',
   [string]$RepoName = 'better-fonts-market',
   [string]$Branch = 'main',
@@ -6,11 +6,14 @@
   [string]$SourceName = 'Better Fonts Market',
   [string]$FontDir = '.',
   [string]$Output = 'manifest.json',
+  [string]$ReleaseTag = 'fonts',
+  [int]$LargeFileThresholdMB = 20,
   [ValidateSet('ofl', 'apache-2.0', 'gpl-2.0', 'gpl-3.0', 'mit', 'public-domain', 'personal', 'commercial', 'unknown')]
   [string]$DefaultLicense = 'unknown'
 )
 
 $ErrorActionPreference = 'Stop'
+$LargeFileThreshold = $LargeFileThresholdMB * 1024 * 1024
 
 function Get-RelativePath {
   param(
@@ -87,6 +90,12 @@ function Get-Id {
   return "$base-$($suffix.Substring(0, 8))"
 }
 
+function Get-ReleaseAssetName {
+  param([string]$Sha256, [string]$FileName)
+  $ext = [System.IO.Path]::GetExtension($FileName)
+  return "$($Sha256.Substring(0, 12))$ext"
+}
+
 $projectRoot = (Get-Location).Path
 $fontRoot = Resolve-Path -Path $FontDir
 $fontExtensions = @('.ttf', '.otf', '.ttc', '.woff', '.woff2')
@@ -100,37 +109,65 @@ if ($files.Count -eq 0) {
 }
 
 $fonts = @()
+$largeFiles = @()
+
 foreach ($file in $files) {
   $relativePath = Get-RelativePath -BasePath $projectRoot -TargetPath $file.FullName
-  $urlPath = Encode-PathForUrl -Path $relativePath
   $baseName = [System.IO.Path]::GetFileNameWithoutExtension($file.Name)
   $sha = (Get-FileHash -Path $file.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
 
+  if ($file.Length -gt $LargeFileThreshold) {
+    # 大文件走 Release
+    $assetName = Get-ReleaseAssetName -Sha256 $sha -FileName $file.Name
+    $url = "https://github.com/$RepoOwner/$RepoName/releases/download/$ReleaseTag/$assetName"
+    $largeFiles += [ordered]@{
+      path      = $file.FullName
+      assetName = $assetName
+      sha256    = $sha
+    }
+    Write-Host "  [Release] $($file.Name) ($([math]::Round($file.Length / 1MB, 1)) MB) -> $assetName"
+  } else {
+    # 小文件走 jsDelivr CDN
+    $urlPath = Encode-PathForUrl -Path $relativePath
+    $url = "https://cdn.jsdelivr.net/gh/$RepoOwner/$RepoName@$Branch/$urlPath"
+    Write-Host "  [CDN] $($file.Name) ($([math]::Round($file.Length / 1MB, 1)) MB)"
+  }
+
   $fonts += [ordered]@{
-    id = Get-Id -RelativePath $relativePath
-    family = Get-Family -BaseName $baseName
-    style = Get-FontStyle -Name $baseName
-    weight = Get-FontWeight -Name $baseName
-    url = "https://cdn.jsdelivr.net/gh/$RepoOwner/$RepoName@$Branch/$urlPath"
-    sha256 = $sha
-    size = [int64]$file.Length
+    id        = Get-Id -RelativePath $relativePath
+    family    = Get-Family -BaseName $baseName
+    style     = Get-FontStyle -Name $baseName
+    weight    = Get-FontWeight -Name $baseName
+    url       = $url
+    sha256    = $sha
+    size      = [int64]$file.Length
     updatedAt = (Get-Date $file.LastWriteTimeUtc).ToString('yyyy-MM-ddTHH:mm:ssZ')
-    license = $DefaultLicense
+    license   = $DefaultLicense
   }
 }
 
 $manifest = [ordered]@{
   manifestVersion = '1'
-  generatedAt = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
-  source = [ordered]@{
-    id = $SourceId
-    name = $SourceName
+  generatedAt     = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
+  source          = [ordered]@{
+    id       = $SourceId
+    name     = $SourceName
     homepage = "https://github.com/$RepoOwner/$RepoName"
   }
-  fonts = $fonts
+  fonts           = $fonts
 }
 
 $json = $manifest | ConvertTo-Json -Depth 8
 Set-Content -Path $Output -Value $json -Encoding UTF8
-Write-Host "Generated $Output with $($fonts.Count) fonts."
+Write-Host "Generated $Output with $($fonts.Count) fonts ($($largeFiles.Count) via Release)."
 
+# 输出大文件列表供 workflow 使用
+if ($env:GITHUB_OUTPUT) {
+  if ($largeFiles.Count -gt 0) {
+    $largeFilesJson = ($largeFiles | ConvertTo-Json -Depth 4 -Compress)
+    "large_files=$largeFilesJson" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding UTF8
+    "has_large_files=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding UTF8
+  } else {
+    "has_large_files=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding UTF8
+  }
+}

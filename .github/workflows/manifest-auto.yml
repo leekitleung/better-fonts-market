@@ -1,15 +1,15 @@
-﻿name: auto-update-manifest
+name: auto-update-manifest
 
 on:
   push:
     branches: [main]
     paths:
-        - '**/*.ttf'
-        - '**/*.otf'
-        - '**/*.ttc'
-        - '**/*.woff'
-        - '**/*.woff2'
-        - 'scripts/generate-manifest.ps1'
+      - '**/*.ttf'
+      - '**/*.otf'
+      - '**/*.ttc'
+      - '**/*.woff'
+      - '**/*.woff2'
+      - 'scripts/generate-manifest.ps1'
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate manifest
+        id: gen
         shell: pwsh
         run: |
           $repo = "${{ github.repository }}".Split('/')[1]
@@ -31,7 +32,40 @@ jobs:
             -RepoName $repo `
             -Branch "${{ github.ref_name }}" `
             -FontDir "." `
-            -Output "manifest.json"
+            -Output "manifest.json" `
+            -ReleaseTag "fonts"
+
+      - name: Upload large fonts to Release
+        if: steps.gen.outputs.has_large_files == 'true'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $tag = "fonts"
+
+          # 确保 Release 存在
+          $exists = gh release view $tag 2>&1
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "Creating release '$tag'..."
+            gh release create $tag --title "Font Assets" --notes "Auto-managed large font files. Do not delete." --latest=false
+          }
+
+          # 获取已有 assets
+          $existingRaw = gh release view $tag --json assets --jq ".assets[].name" 2>$null
+          $existingAssets = @()
+          if ($existingRaw) {
+            $existingAssets = $existingRaw -split "`n" | Where-Object { $_ -ne '' }
+          }
+
+          $largeFiles = '${{ steps.gen.outputs.large_files }}' | ConvertFrom-Json
+          foreach ($item in $largeFiles) {
+            if ($existingAssets -contains $item.assetName) {
+              Write-Host "  [Skip] $($item.assetName) already exists"
+              continue
+            }
+            Write-Host "  [Upload] $($item.path) -> $($item.assetName)..."
+            gh release upload $tag "$($item.path)#$($item.assetName)" --clobber
+          }
 
       - name: Commit manifest if changed
         shell: pwsh
