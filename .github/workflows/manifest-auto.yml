@@ -4,13 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - 'fonts/**'
-      - '*.ttf'
-      - '*.otf'
-      - '*.ttc'
-      - '*.woff'
-      - '*.woff2'
-      - 'scripts/generate-manifest.ps1'
+        - '**/*.ttf'
+        - '**/*.otf'
+        - '**/*.ttc'
+        - '**/*.woff'
+        - '**/*.woff2'
+        - 'scripts/generate-manifest.ps1'
   workflow_dispatch:
 
 permissions:
