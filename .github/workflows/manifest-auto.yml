@@ -58,13 +58,19 @@ jobs:
           }
 
           $largeFiles = '${{ steps.gen.outputs.large_files }}' | ConvertFrom-Json
+          $stagingDir = Join-Path $env:RUNNER_TEMP "release-assets"
+          New-Item -ItemType Directory -Path $stagingDir -Force | Out-Null
+
           foreach ($item in $largeFiles) {
             if ($existingAssets -contains $item.assetName) {
               Write-Host "  [Skip] $($item.assetName) already exists"
               continue
             }
-            Write-Host "  [Upload] $($item.path) -> $($item.assetName)..."
-            gh release upload $tag "$($item.path)#$($item.assetName)" --clobber
+            # 复制为目标文件名再上传，确保 asset name 正确
+            $dest = Join-Path $stagingDir $item.assetName
+            Copy-Item -Path $item.path -Destination $dest -Force
+            Write-Host "  [Upload] $($item.assetName)..."
+            gh release upload $tag $dest --clobber
           }
 
       - name: Commit manifest if changed
