@@ -1,12 +1,34 @@
 {
   "manifestVersion": "1",
-  "generatedAt": "2026-02-12T12:24:41Z",
+  "generatedAt": "2026-02-13T00:50:17Z",
   "source": {
     "id": "better-fonts-market",
     "name": "Better Fonts Market",
     "homepage": "https://github.com/leekitleung/better-fonts-market"
   },
   "fonts": [
+    {
+      "id": "nishiki-teki-nishiki-teki-2-17e8d076",
+      "family": "nishiki teki 2",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/Nishiki-teki%E9%A9%AC%E5%85%8B%E7%AC%94%E6%89%8B%E5%86%99/nishiki-teki-2.ttf",
+      "sha256": "8ac24995cdfed6b5a4cfe80918f4a67fe7a58420f61e2c6ef23f5e9962d021a5",
+      "size": 9719972,
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "yousheyufeitejiankangti-2-f5bb188a",
+      "family": "YouSheYuFeiTeJianKangTi 2",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E4%BC%98%E8%AE%BE%E9%B2%A8%E9%B1%BC%E8%8F%B2%E7%89%B9%E5%81%A5%E5%BA%B7%E4%BD%93/YouSheYuFeiTeJianKangTi-2.ttf",
+      "sha256": "3be2b058677ca0b35d0b52c1c5165f74d351ca24ed0ed12a66e8a90fdeedd79d",
+      "size": 3283520,
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
     {
       "id": "geelydesigntype-b-230a8ca2",
       "family": "GeelyDesignType B",
@@ -15,7 +37,7 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-B.TTF",
       "sha256": "21046a08e5f5552ff1e10f88681881629d157ff8f09f38afc8f4c468673f53f1",
       "size": 1593584,
-      "updatedAt": "2026-02-12T12:24:18Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
       "license": "unknown"
     },
     {
@@ -26,7 +48,7 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-L.TTF",
       "sha256": "da762aca27938b8cdbe8e4dc46f6ed0bcdd64db99dbadfdd0c69a8739f47099b",
       "size": 1621824,
-      "updatedAt": "2026-02-12T12:24:18Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
       "license": "unknown"
     },
     {
@@ -37,7 +59,18 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%90%89%E5%88%A9%E9%93%B6%E6%B2%B3%E7%BE%8E%E5%A5%BD%E4%BD%93/GeelyDesignType-R.TTF",
       "sha256": "1e78865b7694bd0882c4f93f9c9c9cb8eaae9dcc4588afb47ed92b7ec307084d",
       "size": 1604836,
-      "updatedAt": "2026-02-12T12:24:18Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "zikujianghugufengti-2-307e7559",
+      "family": "ZiKuJiangHuGuFengTi 2",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%AD%97%E5%BA%93%E6%B1%9F%E6%B9%96%E5%8F%A4%E9%A3%8E%E4%BD%93/ZiKuJiangHuGuFengTi-2.ttf",
+      "sha256": "8d1cead1150f42e5ac4d5a454a7897ea34e7ab801e6ea12035acb73e54cf06d4",
+      "size": 3779368,
+      "updatedAt": "2026-02-13T00:50:09Z",
       "license": "unknown"
     },
     {
@@ -48,7 +81,18 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%AD%97%E8%A8%80%E5%AD%97%E5%9E%8B-%E6%89%8B%E7%B9%AA%E9%AB%94/Fancy-FreeFont1.ttf",
       "sha256": "09c89347322f2a9a590130a776c579f2b651626f7905410c13f631c896036158",
       "size": 5173708,
-      "updatedAt": "2026-02-12T12:24:18Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "font-dc948189",
+      "family": "平方时光体",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E5%B9%B3%E6%96%B9%E6%97%B6%E5%85%89%E4%BD%93/%E5%B9%B3%E6%96%B9%E6%97%B6%E5%85%89%E4%BD%93.ttf",
+      "sha256": "03eb8797c224c86486f8c922213df5c13e51afaa8cb7f8685fb5ea805c1a3fc8",
+      "size": 4777364,
+      "updatedAt": "2026-02-13T00:50:09Z",
       "license": "unknown"
     },
     {
@@ -59,7 +103,7 @@
       "url": "https://github.com/leekitleung/better-fonts-market/releases/download/fonts/1ea5d0450c0d.otf",
       "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
       "size": 24426256,
-      "updatedAt": "2026-02-12T12:24:18Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
       "license": "unknown"
     },
     {
@@ -70,7 +114,62 @@
       "url": "https://github.com/leekitleung/better-fonts-market/releases/download/fonts/1ea5d0450c0d.ttf",
       "sha256": "1ea5d0450c0d034c3e4077f2b533d74fbd1bf1f14d938477389338e64d3d8d9c",
       "size": 24426256,
-      "updatedAt": "2026-02-12T12:24:19Z",
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "taobaomaicaiti-regular-f96f4bd0",
+      "family": "TaoBaoMaiCaiTi",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B7%98%E5%AE%9D%E4%B9%B0%E8%8F%9C%E8%90%A5%E9%94%80%E4%BD%93/TaoBaoMaiCaiTi-Regular.otf",
+      "sha256": "e83653c863fdc1fa43d15f7f2fcc906ca67a4eca67eedf0e3a3bce11cd44f6fc",
+      "size": 2414416,
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "taobaomaicaiti-regular-94752b99",
+      "family": "TaoBaoMaiCaiTi",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E6%B7%98%E5%AE%9D%E4%B9%B0%E8%8F%9C%E8%90%A5%E9%94%80%E4%BD%93/TaoBaoMaiCaiTi-Regular.ttf",
+      "sha256": "294f6426723f945a95b40704f6238b8f5954de2cfde3dbaa2d74b1a271faea5d",
+      "size": 2269568,
+      "updatedAt": "2026-02-13T00:50:09Z",
+      "license": "unknown"
+    },
+    {
+      "id": "maokenassortedsans-f2c99c71",
+      "family": "MaokenAssortedSans",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E7%8C%AB%E5%95%83%E4%BB%80%E9%94%A6%E9%BB%91/MaokenAssortedSans.otf",
+      "sha256": "9662f871cd4f9bc5ef1b70da1bfbc2203d414a3c9880b4f091516b123acf8503",
+      "size": 10454268,
+      "updatedAt": "2026-02-13T00:50:10Z",
+      "license": "unknown"
+    },
+    {
+      "id": "maokenassortedsans-58a98603",
+      "family": "MaokenAssortedSans",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E7%8C%AB%E5%95%83%E4%BB%80%E9%94%A6%E9%BB%91/MaokenAssortedSans.ttf",
+      "sha256": "78f5f5e40b92f60e5cc10459aa825bab081700ea4bdc15b835bb8e3a0eca14a1",
+      "size": 12281208,
+      "updatedAt": "2026-02-13T00:50:10Z",
+      "license": "unknown"
+    },
+    {
+      "id": "font-1ed4f717",
+      "family": "猫啃忘形圆",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E7%8C%AB%E5%95%83%E5%BF%98%E5%BD%A2%E5%9C%86/%E7%8C%AB%E5%95%83%E5%BF%98%E5%BD%A2%E5%9C%86.ttf",
+      "sha256": "056fcf4f4e4b969952a9e032cc1051e407ede8aeb9b9c3fbe0371d9d4d997147",
+      "size": 3047088,
+      "updatedAt": "2026-02-13T00:50:10Z",
       "license": "unknown"
     },
     {
@@ -81,7 +180,18 @@
       "url": "https://github.com/leekitleung/better-fonts-market/releases/download/fonts/f278b2b6e1d1.otf",
       "sha256": "f278b2b6e1d1808b757340fe7fd96afc3c65c9c6670677242fd6745e032d7539",
       "size": 38607976,
-      "updatedAt": "2026-02-12T12:24:19Z",
+      "updatedAt": "2026-02-13T00:50:10Z",
+      "license": "unknown"
+    },
+    {
+      "id": "font-41723873",
+      "family": "程荣光刻楷",
+      "style": "normal",
+      "weight": 400,
+      "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E7%A8%8B%E8%8D%A3%E5%85%89%E5%88%BB%E6%A5%B7/%E7%A8%8B%E8%8D%A3%E5%85%89%E5%88%BB%E6%A5%B7.ttf",
+      "sha256": "65c7b0e522158a5a3ee03eee80002172adf5a5d0e999ef50cf50ec092c9b0030",
+      "size": 6281180,
+      "updatedAt": "2026-02-13T00:50:10Z",
       "license": "unknown"
     },
     {
@@ -92,7 +202,7 @@
       "url": "https://cdn.jsdelivr.net/gh/leekitleung/better-fonts-market@main/%E9%A6%99%E8%90%83%E7%AB%AF%E5%BA%84%E5%AE%8B%E4%BD%93/XCDUANZHUANGSONGTI.ttf",
       "sha256": "e8f77d1ab3b8558b3e130e9cf07af52b960b58e277abfb14522ddef2606a739a",
       "size": 2959724,
-      "updatedAt": "2026-02-12T12:24:19Z",
+      "updatedAt": "2026-02-13T00:50:10Z",
       "license": "unknown"
     }
   ]
